@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Specifications - Hot Beans Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark');
+            }
+        };
+    </script>
+    <style>
+        .dark body { background-color: #1a202c; color: #cbd5e0; }
+        .dark .bg-white { background-color: #2d3748; }
+        .dark .text-blue-600 { color: #63b3ed; }
+        .dark .bg-blue-500 { background-color: #3182ce; }
+        .dark .bg-blue-600 { background-color: #2b6cb0; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <header class="bg-blue-600 text-white py-6 shadow-md relative">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Job Specifications - Hot Beans Web</h1>
+            <a href="Index.html" class="absolute top-4 right-20 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Back to Main Page
+            </a>
+            <button onclick="toggleDarkMode()" class="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded-full">
+                ☀️
+            </button>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="Index1.html" class="hover:underline">Company Profile</a></li>
+                    <li><a href="Index2.html" class="hover:underline">Trainee Profiles</a></li>
+                    <li><a href="Index3.html" class="hover:underline">Job Specs</a></li>
+                    <li><a href="Index4.html" class="hover:underline">Apply Now</a></li>
+                    <li><a href="Index5.html" class="hover:underline">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="job-specifications" class="container mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Job Specifications</h2>
+        <div class="flex flex-col md:flex-row items-center space-x-6">
+            <!-- Job details block -->
+            <div class="flex-1">
+                <ul class="list-disc ml-6 space-y-2">
+                    <li><strong>Role:</strong> Junior Web Developer</li>
+                    <li><strong>Job Description:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Developing, testing, and maintaining front-end and back-end components of web applications.</li>
+                            <li>Collaborating with designers, developers, and project managers to enhance user experiences.</li>
+                            <li>Debugging and optimizing code for performance and scalability.</li>
+                            <li>Staying up to date with emerging technologies and industry trends.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Skills Required:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Front-End: HTML, CSS, JavaScript, React</li>
+                            <li>Back-End (Bonus): Node.js, Express, MongoDB</li>
+                            <li>Version Control: Git, GitHub</li>
+                            <li>Debugging & Testing: Chrome DevTools, Jest</li>
+                        </ul>
+                    </li>
+                    <li><strong>Soft Skills:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Problem-solving: Ability to analyze issues and implement efficient solutions.</li>
+                            <li>Teamwork: Work collaboratively with designers, developers, and project managers.</li>
+                            <li>Communication: Clearly convey ideas and technical details to team members.</li>
+                            <li>Adaptability: Willingness to learn new technologies and improve skills.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Experience & Education:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Bachelor's degree in Computer Science, Software Engineering, or related field (or equivalent experience).</li>
+                            <li>Recent graduates or self-taught developers with strong portfolios are encouraged to apply.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Job Benefits:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Competitive salary with performance-based bonuses.</li>
+                            <li>Remote work flexibility (hybrid option available).</li>
+                            <li>Learning & development opportunities, including paid online courses.</li>
+                            <li>Access to company hackathons and mentorship programs.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Image block -->
+            <div class="flex-none w-1/3 mt-6 md:mt-0">
+                <img src="How to Demonstrate Adaptability in the Workplace.jpeg" alt="Office Image" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+        <p>&copy; 2025 Hot Beans Web. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

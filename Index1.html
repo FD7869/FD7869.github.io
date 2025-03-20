@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile - Hot Beans Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark');
+            }
+        };
+    </script>
+    <style>
+        .dark body { background-color: #1a202c; color: #cbd5e0; }
+        .dark .bg-white { background-color: #2d3748; }
+        .dark .text-blue-600 { color: #63b3ed; }
+        .dark .bg-blue-500 { background-color: #3182ce; }
+        .dark .bg-blue-600 { background-color: #2b6cb0; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <header class="bg-blue-600 text-white py-6 shadow-md relative">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Company Profile - Hot Beans Web</h1>
+            <a href="Index.html" class="absolute top-4 right-20 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Back to Main Page
+            </a>
+            <button onclick="toggleDarkMode()" class="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded-full">
+                ☀️
+            </button>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="Index1.html" class="hover:underline">Company Profile</a></li>
+                    <li><a href="Index2.html" class="hover:underline">Trainee Profiles</a></li>
+                    <li><a href="Index3.html" class="hover:underline">Job Specs</a></li>
+                    <li><a href="Index4.html" class="hover:underline">Apply Now</a></li>
+                    <li><a href="Index5.html" class="hover:underline">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="company-profile" class="container mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">About Hot Beans Web</h2>
+        <div class="flex items-center space-x-6">
+            <!-- Text Block -->
+            <div class="flex-1">
+                <p>Hot Beans Web is a leading web development company dedicated to building innovative, high-quality web solutions 
+                for clients around the world. Our team of passionate developers, designers, and strategists work together to 
+                create stunning, user-friendly websites and applications that drive business success.
+                </p>
+                <p class="mt-4">
+                    At Hot Beans Web, we believe in continuous learning and professional growth. We offer hands-on experience, 
+                    mentorship programs, and exciting projects that challenge our developers to push their skills to the next level. 
+                    Whether you're a front-end enthusiast or a back-end problem solver, you'll find opportunities to thrive here.
+                </p>
+                <p class="mt-4">
+                    Our company fosters a collaborative and inclusive environment where teamwork, creativity, and innovation are 
+                    at the core of everything we do. Join us and be part of a dynamic team that is shaping the future of web development!
+                </p>
+            </div>
+            <!-- Image Block -->
+            <div class="flex-none w-1/3">
+                <img src="office image.png" alt="Company Image" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+        <p>&copy; 2025 Hot Beans Web. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

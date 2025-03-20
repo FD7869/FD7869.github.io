@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Hot Beans Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark');
+            }
+        };
+    </script>
+    <style>
+        .dark body { background-color: #1a202c; color: #cbd5e0; }
+        .dark .bg-white { background-color: #2d3748; }
+        .dark .text-blue-600 { color: #63b3ed; }
+        .dark .bg-blue-500 { background-color: #3182ce; }
+        .dark .bg-blue-600 { background-color: #2b6cb0; }
+
+        /* Logo styling */
+        .logo {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Makes the logo round */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-600 text-white py-6 shadow-md relative">
+        <div class="container mx-auto text-center">
+            <!-- Logo in top left corner -->
+            <img src="Hot beans logo.webp" alt="Hot Beans Web Logo" class="logo">
+
+            <h1 class="text-3xl font-bold">Welcome to Hot Beans Web!</h1>
+            <a href="Index.html" class="absolute top-4 right-20 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Back to Main Page
+            </a>
+            <button onclick="toggleDarkMode()" class="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded-full">
+                ☀️
+            </button>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="Index1.html" class="hover:underline">Company Profile</a></li>
+                    <li><a href="Index2.html" class="hover:underline">Trainee Profiles</a></li>
+                    <li><a href="Index3.html" class="hover:underline">Job Specs</a></li>
+                    <li><a href="Index4.html" class="hover:underline">Apply Now</a></li>
+                    <li><a href="Index5.html" class="hover:underline">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="company-profile" class="container mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">About Hot Beans Web</h2>
+        <div class="flex items-center space-x-6">
+            <!-- Text Block -->
+            <div class="flex-1">
+                <p>Hot Beans Web is a leading web development company dedicated to building innovative, high-quality web solutions 
+                for clients around the world. Our team of passionate developers, designers, and strategists work together to 
+                create stunning, user-friendly websites and applications that drive business success.
+                </p>
+                <p class="mt-4">
+                    At Hot Beans Web, we believe in continuous learning and professional growth. We offer hands-on experience, 
+                    mentorship programs, and exciting projects that challenge our developers to push their skills to the next level. 
+                    Whether you're a front-end enthusiast or a back-end problem solver, you'll find opportunities to thrive here.
+                </p>
+                <p class="mt-4">
+                    Our company fosters a collaborative and inclusive environment where teamwork, creativity, and innovation are 
+                    at the core of everything we do. Join us and be part of a dynamic team that is shaping the future of web development!
+                </p>
+            </div>
+
+            <!-- Image Block -->
+            <div class="flex-none w-1/3">
+                <img src="office image.png" alt="Company Image" class="w-full h-auto rounded-lg shadow-md flex-1" style="max-width: 150%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <section id="trainee-profiles" class="container mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Trainee Web Developer Profiles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-4 border rounded-lg shadow-md">
+                <img src="Emily-Johnson-Profile.jpg" alt="Emily Johnson" class="w-20 h-20 rounded-full mb-4">
+                <h3 class="text-xl font-semibold">Emily Johnson</h3>
+                <p><strong>Skills:</strong> HTML, CSS, JavaScript, React</p>
+                <p><strong>Qualifications:</strong> BSc in Computer Science</p>
+                <p><strong>About:</strong> Passionate about creating intuitive user interfaces and enhancing user experience through modern front-end frameworks.</p>
+                <p><strong>Projects:</strong></p>
+                <ul class="list-disc ml-6">
+                    <li><strong>Portfolio Website:</strong> Built a responsive portfolio using React and Tailwind CSS to showcase my work, improving accessibility and performance.</li>
+                </ul>
+                <p><strong>Tools & Technologies:</strong></p>
+                <ul class="list-disc ml-6">
+                    <li>Development Tools: VS Code, Chrome DevTools, Figma</li>
+                    <li>Version Control: Git, GitHub, Netlify</li>
+                </ul>
+                <p><strong>Career Goals:</strong> "I aim to specialize in front-end development with a focus on UX/UI and accessibility to create intuitive web experiences."</p>
+                <p><strong>Fun Fact:</strong> "In my free time, I enjoy designing mobile app prototypes and learning about color psychology in UI design."</p>
+            </div>
+            <div class="p-4 border rounded-lg shadow-md">
+                <img src="1684789898587.jpg" alt="Michael Rodriguez" class="w-20 h-20 rounded-full mb-4">
+                <h3 class="text-xl font-semibold">Michael Rodriguez</h3>
+                <p><strong>Skills:</strong> Node.js, Express, MongoDB, REST APIs</p>
+                <p><strong>Qualifications:</strong> Full Stack Web Development Bootcamp Graduate</p>
+                <p><strong>About:</strong> Enjoys building scalable web applications and working with databases to ensure seamless back-end functionality.</p>
+                <p><strong>Projects:</strong></p>
+                <ul class="list-disc ml-6">
+                    <li><strong>E-Commerce API:</strong> Developed a RESTful API for an e-commerce platform using Node.js, Express, and MongoDB, integrating JWT authentication.</li>
+                </ul>
+                <p><strong>Tools & Technologies:</strong></p>
+                <ul class="list-disc ml-6">
+                    <li>Database Management: MongoDB, PostgreSQL</li>
+                    <li>Deployment & Cloud: Docker, AWS, Heroku</li>
+                </ul>
+                <p><strong>Career Goals:</strong> "My goal is to become a full-stack developer and contribute to large-scale applications that solve real-world problems."</p>
+                <p><strong>Fun Fact:</strong> "I love automating workflows with Python scripts and contributing to open-source projects."</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="job-specifications" class="container mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Job Specifications</h2>
+        <div class="flex flex-col md:flex-row items-center space-x-6">
+            <!-- Job details block -->
+            <div class="flex-1">
+                <ul class="list-disc ml-6 space-y-2">
+                    <li><strong>Role:</strong> Junior Web Developer</li>
+                    <li><strong>Job Description:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Developing, testing, and maintaining front-end and back-end components of web applications.</li>
+                            <li>Collaborating with designers, developers, and project managers to enhance user experiences.</li>
+                            <li>Debugging and optimizing code for performance and scalability.</li>
+                            <li>Staying up to date with emerging technologies and industry trends.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Skills Required:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Front-End: HTML, CSS, JavaScript, React</li>
+                            <li>Back-End (Bonus): Node.js, Express, MongoDB</li>
+                            <li>Version Control: Git, GitHub</li>
+                            <li>Debugging & Testing: Chrome DevTools, Jest</li>
+                        </ul>
+                    </li>
+                    <li><strong>Soft Skills:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Problem-solving: Ability to analyze issues and implement efficient solutions.</li>
+                            <li>Teamwork: Work collaboratively with designers, developers, and project managers.</li>
+                            <li>Communication: Clearly convey ideas and technical details to team members.</li>
+                            <li>Adaptability: Willingness to learn new technologies and improve skills.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Experience & Education:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Bachelor's degree in Computer Science, Software Engineering, or related field (or equivalent experience).</li>
+                            <li>Recent graduates or self-taught developers with strong portfolios are encouraged to apply.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Job Benefits:</strong>
+                        <ul class="list-disc ml-6">
+                            <li>Competitive salary with performance-based bonuses.</li>
+                            <li>Remote work flexibility (hybrid option available).</li>
+                            <li>Learning & development opportunities, including paid online courses.</li>
+                            <li>Access to company hackathons and mentorship programs.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Image block -->
+            <div class="flex-none w-1/3 mt-6 md:mt-0">
+                <img src="How to Demonstrate Adaptability in the Workplace.jpeg" alt="Office Image" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <section id="application-form" class="container mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Apply Now</h2>
+        <form id="applicationForm" class="space-y-4">
+            <input type="text" placeholder="Full Name" class="w-full p-2 border rounded" required>
+            <input type="email" placeholder="Email Address" class="w-full p-2 border rounded" required>
+            <input type="number" placeholder="Age" class="w-full p-2 border rounded" required>
+            <input type="tel" placeholder="Phone Number" class="w-full p-2 border rounded" required>
+            <label for="uploadCV" class="block text-gray-700">Upload CV</label>
+            <input type="file" id="uploadCV" class="w-full p-2 border rounded" required>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            Submit
+            </button>
+        </form>
+        <p id="thankYouMessage" class="text-green-600 mt-4 hidden">Thank you for submitting your application!</p>
+    </section>
+
+    <section id="courses" class="container mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Web Development Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="https://www.codecademy.com/" class="block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-700">Codecademy</a>
+            <a href="https://www.udemy.com/" class="block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-700">Udemy</a>
+            <a href="https://www.freecodecamp.org/" class="block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-700">freeCodeCamp</a>
+        </div>
+    </section>
+
+    <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+        <p>&copy; 2025 Hot Beans Web. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("applicationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById("thankYouMessage").classList.remove("hidden"); // Show the message
+            this.reset(); // Reset form fields after submission
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Hot Beans Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.documentElement.classList.add('dark');
+            }
+        };
+    </script>
+    <style>
+        .dark body { background-color: #1a202c; color: #cbd5e0; }
+        .dark .bg-white { background-color: #2d3748; }
+        .dark .text-blue-600 { color: #63b3ed; }
+        .dark .bg-blue-500 { background-color: #3182ce; }
+        .dark .bg-blue-600 { background-color: #2b6cb0; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <header class="bg-blue-600 text-white py-6 shadow-md relative">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Courses - Hot Beans Web</h1>
+            <a href="Index.html" class="absolute top-4 right-20 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Back to Main Page
+            </a>
+            <button onclick="toggleDarkMode()" class="absolute top-4 right-4 p-2 bg-gray-800 text-white rounded-full">
+                ☀️
+            </button>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-6">
+                    <li><a href="Index1.html" class="hover:underline">Company Profile</a></li>
+                    <li><a href="Index2.html" class="hover:underline">Trainee Profiles</a></li>
+                    <li><a href="Index3.html" class="hover:underline">Job Specs</a></li>
+                    <li><a href="Index4.html" class="hover:underline">Apply Now</a></li>
+                    <li><a href="Index5.html" class="hover:underline">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="courses" class="container mx-auto my-10 p-6 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Web Development Courses</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="https://www.codecademy.com/" class="block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-700">
+                <img src="codeacademy.webp" alt="Codecademy Logo" class="mx-auto mb-2">
+                Codecademy
+            </a>
+            <a href="https://www.udemy.com/" class="block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-700">
+                <img src="Udemy.webp" alt="Udemy Logo" class="mx-auto mb-2">
+                Udemy
+            </a>
+            <a href="https://www.freecodecamp.org/" class="block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-700">
+                <img src="freecodecamp.webp" alt="freeCodeCamp Logo" class="mx-auto mb-2">
+                freeCodeCamp
+            </a>
+        </div>
+    </section>
+
+
+    <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+        <p>&copy; 2025 Hot Beans Web. All rights reserved.</p>
+        <a href="Index.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 inline-block mt-4">Back to Main Page</a>
+    </footer>
+
+</body>
+</html>
